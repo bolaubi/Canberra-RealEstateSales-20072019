@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800"></h1>
+</div>
+
+
+<!-- Row -->
+<div class="row">
+
+    <!-- Area Chart -->
+    <div class="col-xl-8 col-lg-7">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Correlation Matrix</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="mt-4 text-left small">
+                    <img class="img-fluid px-sm-4 mx-3" style="width: 40rem;"
+                        src="{{ url_for('static', filename='img/ss_heatmap.JPG') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="col-xl-4 col-lg-5">
+        <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Conclusion</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="mt-4 text-left small">
+                    <p>It can be seen through this heat map that bedrooms and bathrooms are the top two features with
+                        the highest correlation value with the price. Meanwhile, parking and the rest of the features have
+                        fairly moderate and relatively low correlation values. </p>
+                    <p>
+                        In addition, the exact day and month when the property was sold has no implication to the price
+                        of the property. On the other hand, the year when the property was sold and the location of the
+                        property that is conveyed through postal code have minor implications to the price.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

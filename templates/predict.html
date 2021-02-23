@@ -1,0 +1,298 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Canberra Real Estate Price Predictor</h1>
+</div>
+
+
+<!-- Content Row -->
+<form action="{{ url_for('result') }}" method="POST">
+    <div class="row">
+
+        <!-- Input Your Data -->
+        <div class="col-xl-2 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Input</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">Your Data</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parking -->
+        <div class="col-xl-2 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <label for="parking">Number of Parking Lots</label></div>
+                            <input type="number" name="parking" step="1" min="0" max="31" placeholder="1" id="parking"
+                                required />
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-car fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bathrooms -->
+        <div class="col-xl-2 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <label for="bathrooms">Number of Bathrooms</label></div>
+                            <input type="number" name="bathrooms" step="1" min="1" max="21" placeholder="1"
+                                id="bathrooms" required />
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-restroom fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bedrooms -->
+        <div class="col-xl-2 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <label for="bedrooms">Number of Bedrooms</label></div>
+                            <input type="number" name="bedrooms" step="1" min="0" max="14" placeholder="1" id="bedrooms"
+                                required />
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-bed fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suburb -->
+        <div class="col-xl-2 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <label for="suburbs">Name of Suburb</label></div>
+                            <select id="suburbs" name="suburb">
+                                <option value="Acton">Acton</option>
+                                <option value="Ainslie">Ainslie</option>
+                                <option value="Amaroo">Amaroo</option>
+                                <option value="Aranda">Aranda</option>
+                                <option value="Banks">Banks</option>
+                                <option value="Barton">Barton</option>
+                                <option value="Belconnen">Belconnen</option>
+                                <option value="Bonner">Bonner</option>
+                                <option value="Bonython">Bonython</option>
+                                <option value="Braddon">Braddon</option>
+                                <option value="Bruce">Bruce</option>
+                                <option value="Calwell">Calwell</option>
+                                <option value="Campbell">Campbell</option>
+                                <option value="Casey">Casey</option>
+                                <option value="Chapman">Chapman</option>
+                                <option value="Charnwood">Charnwood</option>
+                                <option value="Chifley">Chifley</option>
+                                <option value="Chisholm">Chisholm</option>
+                                <option value="City">City</option>
+                                <option value="Conder">Conder</option>
+                                <option value="Cook">Cook</option>
+                                <option value="Coombs">Coombs</option>
+                                <option value="Crace">Crace</option>
+                                <option value="Curtin">Curtin</option>
+                                <option value="Deakin">Deakin</option>
+                                <option value="Denman Prospect">Denman Prospect</option>
+                                <option value="Dickson">Dickson</option>
+                                <option value="Downer">Downer</option>
+                                <option value="Duffy">Duffy</option>
+                                <option value="Dunlop">Dunlop</option>
+                                <option value="Evatt">Evatt</option>
+                                <option value="Fadden">Fadden</option>
+                                <option value="Farrer">Farrer</option>
+                                <option value="Fisher">Fisher</option>
+                                <option value="Florey">Florey</option>
+                                <option value="Flynn">Flynn</option>
+                                <option value="Forde">Forde</option>
+                                <option value="Forrest">Forrest</option>
+                                <option value="Franklin">Franklin</option>
+                                <option value="Fraser">Fraser</option>
+                                <option value="Garran">Garran</option>
+                                <option value="Gilmore">Gilmore</option>
+                                <option value="Giralang">Giralang</option>
+                                <option value="Gordon">Gordon</option>
+                                <option value="Gowrie">Gowrie</option>
+                                <option value="Greenway">Greenway</option>
+                                <option value="Griffith">Griffith</option>
+                                <option value="Gungahlin">Gungahlin</option>
+                                <option value="Hackett">Hackett</option>
+                                <option value="Hall">Hall</option>
+                                <option value="Harrison">Harrison</option>
+                                <option value="Hawker">Hawker</option>
+                                <option value="Higgins">Higgins</option>
+                                <option value="Holder">Holder</option>
+                                <option value="Holt">Holt</option>
+                                <option value="Hughes">Hughes</option>
+                                <option value="Isaacs">Isaacs</option>
+                                <option value="Isabella Plains">Isabella Plains</option>
+                                <option value="Jacka">Jacka</option>
+                                <option value="Kaleen">Kaleen</option>
+                                <option value="Kambah">Kambah</option>
+                                <option value="Kingston">Kingston</option>
+                                <option value="Latham">Latham</option>
+                                <option value="Lawson">Lawson</option>
+                                <option value="Lyneham">Lyneham</option>
+                                <option value="Lyons">Lyons</option>
+                                <option value="MacGregor">MacGregor</option>
+                                <option value="Macarthur">Macarthur</option>
+                                <option value="Macquarie">Macquarie</option>
+                                <option value="Mawson">Mawson</option>
+                                <option value="McKellar">McKellar</option>
+                                <option value="Melba">Melba</option>
+                                <option value="Monash">Monash</option>
+                                <option value="Moncrieff">Moncrieff</option>
+                                <option value="Narrabundah">Narrabundah</option>
+                                <option value="Ngunnawal">Ngunnawal</option>
+                                <option value="Nicholls">Nicholls</option>
+                                <option value="O'Connor">O'Connor</option>
+                                <option value="O'Malley">O'Malley</option>
+                                <option value="Oaks Estate">Oaks Estate</option>
+                                <option value="Oxley">Oxley</option>
+                                <option value="Page">Page</option>
+                                <option value="Palmerston">Palmerston</option>
+                                <option value="Pearce">Pearce</option>
+                                <option value="Phillip">Phillip</option>
+                                <option value="Red Hill">Red Hill</option>
+                                <option value="Reid">Reid</option>
+                                <option value="Richardson">Richardson</option>
+                                <option value="Rivett">Rivett</option>
+                                <option value="Scullin">Scullin</option>
+                                <option value="Spence">Spence</option>
+                                <option value="Stirling">Stirling</option>
+                                <option value="Symonston">Symonston</option>
+                                <option value="Taylor">Taylor</option>
+                                <option value="Tharwa">Tharwa</option>
+                                <option value="Theodore">Theodore</option>
+                                <option value="Throsby">Throsby</option>
+                                <option value="Torrens">Torrens</option>
+                                <option value="Turner">Turner</option>
+                                <option value="Uriarra Village">Uriarra Village</option>
+                                <option value="Wanniassa">Wanniassa</option>
+                                <option value="Waramanga">Waramanga</option>
+                                <option value="Watson">Watson</option>
+                                <option value="Weetangera">Weetangera</option>
+                                <option value="Weston">Weston</option>
+                                <option value="Wright">Wright</option>
+                                <option value="Yarralumla">Yarralumla</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Type of Property -->
+        <div class="col-xl-2 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                <label for="propertyType">Type of the Property</label></div>
+                            <select id="propertyType" name="propertyType">
+                                <option value="house">house</option>
+                                <option value="unit">unit</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <i class="far fa-building  fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Your Result</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    {% block result %}
+                    <h3>Your Desired Real Estate:</h3>
+                    <ul>
+                        <li>Number of Parking Lots: ... </li>
+                        <li>Number of Bathrooms: ... </li>
+                        <li>Number of Bedrooms: ... </li>
+                        <li>Name of the Suburb: ... </li>
+                        <li>Type of the Property: ... </li>
+                    </ul>
+
+                    <p><strong>Your Desired Real Estate is forecasted to be at</strong> <span
+                            class="badge badge-secondary"> A$ ... </span></p>
+                    {% endblock result %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Illustration -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Let's Predict!</h6>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+
+                    <!-- illustration -->
+                    <div class="text-center">
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                            src="{{ url_for('static', filename='img/undraw_posting_photo.svg') }}" alt="">
+                    </div>
+
+                    <!-- submit -->
+                    <div class="align-items-center justify-content-between mb-4">
+                        <button
+                            class="d-flex justify-content-center d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-download fa-sm text-white-50"></i> Predict Now </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "predict.html" %}
+{% block result %}
+
+<h3>Your Desired Real Estate:</h3>
+<ul>
+    <li>Number of Parking Lots: {{ data['parking'] }}</li>
+    <li>Number of Bathrooms: {{ data['bathrooms'] }}</li>
+    <li>Number of Bedrooms: {{ data['bedrooms'] }}</li>
+    <li>Name of the Suburb: {{ data['suburb'] }}</li>
+    <li>Type of the Property: {{ data['propertyType'] }}</li>
+</ul>
+
+<p><strong>Your Desired Real Estate is forecasted to be at</strong> <span class="badge badge-secondary">A$ {{ prediction }}</span></p>
+
+
+
+
+{% endblock result %}

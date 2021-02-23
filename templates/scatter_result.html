@@ -1,0 +1,15 @@
+{% extends "scatter.html" %}
+{% block scatter_result %}
+
+<!-- Displaying the Diagram -->
+<div class="col-xl-12 col-md-6 mb-4">
+    <div class="chart" id="plot">
+        <script>
+            var graphs = {{ plot | safe }};
+            Plotly.plot('plot', graphs, {});
+        </script>
+    </div>
+</div>
+
+
+{% endblock scatter_result %}

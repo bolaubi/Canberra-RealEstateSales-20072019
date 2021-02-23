@@ -1,0 +1,110 @@
+{% extends "home.html" %}
+{% block diagram %}
+
+
+<!-- Form Scatter -->
+<form action="{{ url_for('histogram') }}">
+
+    <div class="d-sm-flex align-items-center justify-content-end mb-4">
+        <button class="d-flex justify-content-end d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fas fa-download fa-sm text-white-50"></i> Submit </button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Input Your Data -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Input</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Your Data</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Your Data -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Input X </div>
+                                <select id="propertyType" name="x_value_html">
+                                    <option value="parking">Parking Lots</option>
+                                    <option value="bathrooms">Bathrooms</option>
+                                    <option value="bedrooms">Bedrooms</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fab fa-xing fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Your Data -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Input Estimator </div>
+                                <select id="propertyType" name="estimator_value_html">
+                                    <option value="count">Count</option>
+                                    <option value="avg">Average</option>
+                                    <option value="max">Max</option>
+                                    <option value="min">Min</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-balance-scale fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Your Data -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Input Hue</div>
+                                <select id="propertyType" name="hue_value_html">
+                                    <option value="propertyType">Property Type</option>
+                                    <option value="quarters">Quarter</option>
+                                    <option value="seasons">Season</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-swatchbook fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Displaying the Diagram -->
+        <div class="row">
+            {% block histogram_result %}
+            
+            {% endblock histogram_result %}
+        </div>
+    </div>
+</form>
+
+{% endblock diagram %}

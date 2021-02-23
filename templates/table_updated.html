@@ -1,0 +1,31 @@
+{% extends "data.html" %}
+
+{% block table %}
+
+<table class="table table-striped table-sm table-responsive table-responsive-xl-8 table-responsive-col-lg-4" style='overflow: auto; height: 250px;'>
+    <th>
+        <td>Price</td>
+        <td>Parking</td>
+        <td>Bathrooms</td>
+        <td>Bedrooms</td>
+        <td>Suburb</td>
+        <td>PropertyType</td>
+        <td>Quarters</td>
+        <td>Seasons</td>
+    </th>
+    {% for item in data %}
+    <tr>
+        <td>*</td>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>
+        <td>{{item[7]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock table %}
