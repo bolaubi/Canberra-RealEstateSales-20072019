@@ -109,7 +109,7 @@ def histogram():
     )
 
 
-###  Basic Navigation  ###
+###  Navigation & other functions  ###
 @app.route('/')
 @app.route('/home', methods=['POST', 'GET'])
 def home():

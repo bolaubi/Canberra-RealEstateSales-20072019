@@ -3,6 +3,7 @@
 <hr/>
 
 <hr/>
+
 ## Introduction
 
 Data was obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
@@ -18,18 +19,21 @@ Through this project, we hope to understand how the real estate market in Canber
 
 
 > #### Questions
+
 - What features affect the real estate prices in Canberra?
 - What is the real estate price in Canberra going to be like in the near future according to the given datasets?
 
 
 
 > #### The Scope of the Research Problem
+
 - Historical data from 2007 - 2019
 - Maximum real estate price capped at 5M (for analysis and visualization)
 
 
 
 > #### Users
+
 - Users & renters
 - Property investors
 - Renovators
@@ -38,9 +42,7 @@ Through this project, we hope to understand how the real estate market in Canber
 
 ## Github File Descriptions
 
-![image-20210223100353166](README_BENEDICTLAIMAN.assets/image-20210223100353166.png)
-
-Please download the remaining files through **[this link]()**
+![image-20210223154120999](README_BENEDICTLAIMAN.assets/image-20210223154120999.png)
 
 1. __property_sales_canberra.csv__ --> csv file containing the original data from HtAG
 
@@ -60,9 +62,11 @@ Please download the remaining files through **[this link]()**
 
 9. **gbr_twlo_final** --> final machine learning model
 
-10. **app.py** --> python file for dashboard
+10. **checking_model.ipynb** --> ipynb file to check saved machine learning model
 
-11. **static** --> folder containing all the dependencies for dashboard
+11. **app.py** --> python file for dashboard
+
+12. **static** --> folder containing all the dependencies for dashboard
 
     - **css** --> folder containing css files
     - **img** --> folder containing images/ vector images
@@ -70,35 +74,28 @@ Please download the remaining files through **[this link]()**
     - **scss**  --> folder containing scss files
     - **vendor** --> folder containing the other dependencies
 
-12. **templates** --> html files for dashboard
+13. **templates** --> html files for dashboard
 
     - layout.html
-
     - login.html
-
     - home.html
-
     - about.html
-
     - conclusion.html
-
     - data.html
-
     - table_updated.html
-
     - histogram.html
-
     - histogram_result.html
-
     - predict.html
-
     - result.html
-
     - scatter.html
-
     - scatter_result.html
 
-      
+
+14. **CanberraRealEstateSales20072019_BenedictLaiman.pptx** --> Presentation file
+
+15. **README_BENEDICTLAIMAN.assets** --> folder containing assets for markdown file
+
+    
 
 <hr/>
 
@@ -116,7 +113,7 @@ Please download the remaining files through **[this link]()**
   df_preprocessed = pd.read_sql("SELECT * FROM property_sales_canberra_preprocessed100.mytable", dbConnection)
   ```
 
--  Use **property_sales_canberra_preprocessed.sql** as the database for the dashboard instead of **property_sales_canberra_preprocessed100.sql** to gain a complete preprocessed dataset.
+- Use **property_sales_canberra_preprocessed.sql** as the database for the dashboard instead of **property_sales_canberra_preprocessed100.sql** to gain a complete preprocessed dataset.
 
 <hr/>
 
