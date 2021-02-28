@@ -153,7 +153,7 @@ Through this project, we hope to understand how the real estate market in Canber
 
 > #### Table & Data Inputter Page
 
-![image-20210223115350969](README_BENEDICTLAIMAN.assets/image-20210223115350969.png)
+![image-20210228234354654](README_BENEDICTLAIMAN.assets/image-20210228234354654.png)
 
 <br>
 
