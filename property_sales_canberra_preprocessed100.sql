@@ -1,5 +1,6 @@
 CREATE TABLE mytable(
-   price        NUMERIC(9,1) NOT NULL
+   index_num    tinyint(4) NOT NULL AUTO_INCREMENT
+  ,price        NUMERIC(9,1) NOT NULL
   ,parking      INTEGER  NOT NULL
   ,bathrooms    INTEGER  NOT NULL
   ,bedrooms     INTEGER  NOT NULL
@@ -7,6 +8,7 @@ CREATE TABLE mytable(
   ,propertyType VARCHAR(5) NOT NULL
   ,quarters     VARCHAR(2) NOT NULL
   ,seasons      VARCHAR(6) NOT NULL
+  ,PRIMARY KEY (`index_num`)
 );
 INSERT INTO mytable(price,parking,bathrooms,bedrooms,suburb,propertyType,quarters,seasons) VALUES (515000.0,2,2,3,'Garran','house','q2','summer');
 INSERT INTO mytable(price,parking,bathrooms,bedrooms,suburb,propertyType,quarters,seasons) VALUES (710000.0,2,2,4,'Latham','house','q3','fall');

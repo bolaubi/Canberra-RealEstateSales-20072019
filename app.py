@@ -2,10 +2,10 @@
 from datetime import datetime
 from flask import Flask, render_template, url_for, flash, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy.orm import sessionmaker
 import plotly
 import plotly.graph_objs as go
-
+import mysql.connector
 import pandas as pd
 import json
 import sqlalchemy as db
@@ -227,6 +227,30 @@ def update():
 
         return render_template('table_updated.html', title="Updated Table", data=data)
 
+
+@app.route('/delete', methods=['POST', 'GET'])
+def delete():
+
+    if request.method == 'POST':
+
+        sqlengine = db.create_engine('mysql+pymysql://root:12345@localhost:3306/property_sales_canberra_preprocessed100')
+        engine = sqlengine.raw_connection()
+        Session = sessionmaker(bind=engine)
+        session = Session()
+        cursor = engine.cursor()
+
+        conn = mysql.connector.connect(user='root', password='12345', host='localhost', database='property_sales_canberra_preprocessed100')
+        conn_cursor = conn.cursor()
+
+        conn_cursor.execute('DELETE from property_sales_canberra_preprocessed100.mytable order by index_num DESC LIMIT 1;')
+        conn.commit()
+        conn.close()
+
+        cursor.execute('SET @r = 0;')
+        cursor.execute('SELECT * FROM (SELECT *, (@r := @r + 1) AS r_id FROM property_sales_canberra_preprocessed100.mytable) AS tmp ORDER BY r_id DESC LIMIT 10;')
+        data = cursor.fetchall()
+
+        return render_template('table_updated.html', title="Updated Table", data=data)
 
 if __name__ == '__main__':
 
