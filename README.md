@@ -4,6 +4,8 @@
 
 ![city skyline under blue sky during daytime](https://images.unsplash.com/photo-1611231731916-826fe315c533?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80)
 
+Photo by [Daniel Morton](https://unsplash.com/@themortz) on [Unsplash](https://unsplash.com/photos/V_pvQ96focY)
+
 ## Introduction
 
 Data was obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
