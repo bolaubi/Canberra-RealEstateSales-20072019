@@ -121,47 +121,53 @@ Through this project, we hope to understand how the real estate market in Canber
 
 ## Dashboard
 
+Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin-2), modified by [Benedict Laiman](https://www.linkedin.com/in/benedict-laiman-60401319a/)
+
+* This dashboard can only be open locally through localhost, it is created with *Flask*, *Sqlalchemy*, and *MySQL*
+
+* Deployed version of this <a href="https://canberra.herokuapp.com/"><img src="https://img.shields.io/badge/Canberra%20Dashboard-Live-brightgreen&?style=flat-square&logo=heroku" /></a>can be found <a href="https://canberra.herokuapp.com/">***here***</a>, it is created with *Flask*, Sqlalchemy*, PostgreSQL*, and *Heroku*
+
 <br>
 
 > #### Home Page
 
-![image-20210223114839620](README_BENEDICTLAIMAN.assets/image-20210223114839620.png)
+![image-20210305195216119](README_BENEDICTLAIMAN.assets/image-20210305195216119.png)
 
 <br>
 
 > #### About Page
 
-![image-20210223115025121](README_BENEDICTLAIMAN.assets/image-20210223115025121.png)
-
-<br>
-
-> #### Scatter Plot Page
-
-![image-20210223115151322](README_BENEDICTLAIMAN.assets/image-20210223115151322.png)
-
-<br>
-
-> #### Histogram Page
-
-![image-20210223115240192](README_BENEDICTLAIMAN.assets/image-20210223115240192.png)
+![image-20210305195251834](README_BENEDICTLAIMAN.assets/image-20210305195251834.png)
 
 <br>
 
 > #### Conclusion Page
 
-![image-20210223115330255](README_BENEDICTLAIMAN.assets/image-20210223115330255.png)
+![image-20210305195723151](README_BENEDICTLAIMAN.assets/image-20210305195723151.png)
 
 <br>
 
 > #### Table & Data Inputter Page
 
-![image-20210301000105783](README_BENEDICTLAIMAN.assets/image-20210301000105783.png)
+![image-20210305195820011](README_BENEDICTLAIMAN.assets/image-20210305195820011.png)
+
+<br>
+
+> #### Scatter Plot Page
+
+![image-20210305195542889](README_BENEDICTLAIMAN.assets/image-20210305195542889.png)
+
+<br>
+
+> #### Histogram Page
+
+![image-20210305195615596](README_BENEDICTLAIMAN.assets/image-20210305195615596.png)
 
 <br>
 
 > #### Real Estate Price Predictor Page
 
-![image-20210223115421241](README_BENEDICTLAIMAN.assets/image-20210223115421241.png)
+![image-20210305195859325](README_BENEDICTLAIMAN.assets/image-20210305195859325.png)
 
 *This dashboard is a fully responsive website.
 

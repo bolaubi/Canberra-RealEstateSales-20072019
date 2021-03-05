@@ -73,6 +73,8 @@
                         <h6 class="collapse-header">List of Pages:</h6>
                         <a class="collapse-item" href="{{ url_for('conclusion') }}">Conclusion</a>
                         <a class="collapse-item" href="{{ url_for('data') }}">Input Data</a>
+                        <a class="collapse-item" href="{{ url_for('scatter_site') }}">Scatter Plot</a>
+                        <a class="collapse-item" href="{{ url_for('histogram_site') }}">Histogram</a>
                     </div>
                 </div>
             </li>
@@ -121,12 +123,6 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
-                    <a href="{{ url_for('scatter_site') }}" class="d-none d-sm-inline-block btn btn-md mx-1"><span
-                            class="mr-2 d-none d-lg-inline text-gray-600 small">Scatter Plot</span></a>
-
-                    <a href="{{ url_for('histogram_site') }}" class="d-none d-sm-inline-block btn btn-md mx-1"><span
-                            class="mr-2 d-none d-lg-inline text-gray-600 small">Histogram</span></a>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
