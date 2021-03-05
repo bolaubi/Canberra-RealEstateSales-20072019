@@ -125,7 +125,7 @@ Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin
 
 * This dashboard can only be open locally through localhost, it is created with *Flask*, *Sqlalchemy*, and *MySQL*
 
-* Deployed version of this <a href="https://canberra.herokuapp.com/"><img src="https://img.shields.io/badge/Canberra%20Dashboard-Live-brightgreen&?style=flat-square&logo=heroku" /></a>can be found <a href="https://canberra.herokuapp.com/">***here***</a>, it is created with *Flask*, Sqlalchemy*, PostgreSQL*, and *Heroku*
+* Deployed version of this <a href="https://canberra.herokuapp.com/"><img src="https://img.shields.io/badge/Canberra%20Dashboard-Live-brightgreen&?style=flat-square&logo=heroku" /></a> can be found <a href="https://canberra.herokuapp.com/">***here***</a>, it is created with *Flask*, *SQLAlchemy*, *PostgreSQL*, and *Heroku*
 
 <br>
 
