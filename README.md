@@ -131,43 +131,43 @@ Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin
 
 > #### Home Page
 
-![image-20210306081558589](README_BENEDICTLAIMAN.assets/image-20210306081558589.png)
+![image-20210306082903178](README_BENEDICTLAIMAN.assets/image-20210306082903178.png)
 
 <br>
 
 > #### About Page
 
-![image-20210306081628438](README_BENEDICTLAIMAN.assets/image-20210306081628438.png)
+![image-20210306083034787](README_BENEDICTLAIMAN.assets/image-20210306083034787.png)
 
 <br>
 
 > #### Conclusion Page
 
-![image-20210306081908753](README_BENEDICTLAIMAN.assets/image-20210306081908753.png)
+![image-20210306083104005](README_BENEDICTLAIMAN.assets/image-20210306083104005.png)
 
 <br>
 
 > #### Table & Data Inputter Page
 
-![image-20210306082005144](README_BENEDICTLAIMAN.assets/image-20210306082005144.png)
+![image-20210306083136777](README_BENEDICTLAIMAN.assets/image-20210306083136777.png)
 
 <br>
 
 > #### Scatter Plot Page
 
-![image-20210306082108434](README_BENEDICTLAIMAN.assets/image-20210306082108434.png)
+![image-20210306083212695](README_BENEDICTLAIMAN.assets/image-20210306083212695.png)
 
 <br>
 
 > #### Histogram Page
 
-![image-20210306082144440](README_BENEDICTLAIMAN.assets/image-20210306082144440.png)
+![image-20210306083241700](README_BENEDICTLAIMAN.assets/image-20210306083241700.png)
 
 <br>
 
 > #### Real Estate Price Predictor Page
 
-![image-20210306082227161](README_BENEDICTLAIMAN.assets/image-20210306082227161.png)
+![image-20210306083307699](README_BENEDICTLAIMAN.assets/image-20210306083307699.png)
 
 *This dashboard is a fully responsive website.
 
