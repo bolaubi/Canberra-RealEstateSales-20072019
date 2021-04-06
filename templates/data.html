@@ -4,10 +4,6 @@
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Canberra Real Estate Data Inputter</h1>
-        <form action="{{ url_for('delete') }}" method="POST">
-            <button class="d-flex justify-content-center d-sm-inline-block btn btn-sm btn-light shadow-sm">
-                <i class="fas fa-times-circle fa-sm text-gray-600"></i> Delete Last </button>
-        </form>
 </div>
 
 
@@ -269,7 +265,7 @@
 
                     <!-- illustration -->
                     <div class class="text-center">
-                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-3" style="width: 25rem;"
                             src="{{ url_for('static', filename='img/undraw_posting_photo.svg') }}" alt="">
                     </div>
 
@@ -279,17 +275,16 @@
                         <button
                             class="d-flex justify-content-center d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-download fa-sm text-white-50"></i> Submit </button>
+
+                        <button formaction="{{ url_for('delete') }}" type="submit" class="d-flex justify-content-center d-sm-inline-block btn btn-sm btn-light shadow-sm" formnovalidate>
+                            <i class="fas fa-times-circle fa-sm text-gray-600"></i> Delete Last </button>
                     </div>
 
                 </div>
             </div>
         </div>
     </div>
-
 </form>
-
-
-
 
 
 {% endblock content %}
