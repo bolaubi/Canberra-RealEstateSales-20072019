@@ -149,7 +149,7 @@ Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin
 
 > #### Table & Data Inputter Page
 
-![image-20210306083136777](README_BENEDICTLAIMAN.assets/image-20210306083136777.png)
+![image-20210406201559256](README_BENEDICTLAIMAN.assets/image-20210406201559256.png)
 
 <br>
 
