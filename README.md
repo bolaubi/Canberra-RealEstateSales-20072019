@@ -175,12 +175,12 @@ Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin
 
 ## Profile
 
+© Benedict Laiman 2021
+
 Get in touch with me through:
 
 - [Linkedin](https://www.linkedin.com/in/benedict-laiman-60401319a/)
 - [Discord](https://discordapp.com/users/525654231940857867/)
-- [Instagram](https://www.instagram.com/benedictlaiman/)
-- [Issuu](https://issuu.com/benedictlaiman/)
 
 
 
