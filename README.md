@@ -21,12 +21,27 @@ The aim of this project is to conduct exploratory data analysis and construct a 
 
 > #### This project caters to the following user groups:
 - Prospective buyers and renters
+
 - Property investors
+
 - Individuals interested in renovation opportunities
 
+  
 
+## Some Findings:
 
-#### Dataset:
+- The most effective algorithm employed is the Gradient Boost Regressor Tuned, optimized through hyperparameter tuning (including max_depth, n_estimators, and loss function) and the removal of outliers. It achieved a mean neg_mean_absolute_error of -107,049.269 during several cross-validation runs.
+
+- Over the period from 2007 to 2019, house prices in Canberra consistently demonstrated an upward trend, steadily increasing throughout this duration. Conversely, unit prices exhibited fluctuations and remained relatively stable compared to their initial values.
+
+- Analysis of sales across quarters (q1, q2, q3, q4) throughout the observed period revealed consistent patterns, with no significant differences (as confirmed by the Kruskal-Wallis Test). However, when considering seasons, it becomes apparent that real estate sales during the winter season tended to be lower compared to other seasons.
+
+- etc (Please check out the "data_clean_viz_benedictlaiman.ipynb" file :D )
+
+  
+
+## Dataset:
+
 Data were obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
 
 Column Descriptions
@@ -42,14 +57,7 @@ Column Descriptions
 - propertyType = type of the property
 - suburbid = the id of the suburbs
 
-## Some Findings:
 
-- The most effective algorithm employed is the Gradient Boost Regressor Tuned, optimized through hyperparameter tuning (including max_depth, n_estimators, and loss function) and the removal of outliers. It achieved a mean neg_mean_absolute_error of -107,049.269 during several cross-validation runs.
-
-- Over the period from 2007 to 2019, house prices in Canberra consistently demonstrated an upward trend, steadily increasing throughout this duration. Conversely, unit prices exhibited fluctuations and remained relatively stable compared to their initial values.
-
-- Analysis of sales across quarters (q1, q2, q3, q4) throughout the observed period revealed consistent patterns, with no significant differences (as confirmed by the Kruskal-Wallis Test). However, when considering seasons, it becomes apparent that real estate sales during the winter season tended to be lower compared to other seasons.
-- etc (Please check out the "data_clean_viz_benedictlaiman.ipynb" file :D )
 
 ## Dashboard
 
