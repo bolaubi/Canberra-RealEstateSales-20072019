@@ -8,39 +8,102 @@ Photo by [Daniel Morton](https://unsplash.com/@themortz) on [Unsplash](https://u
 
 ## Introduction
 
-Data was obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
+The aim of this project is to conduct exploratory data analysis and construct a regression-based machine learning model for predicting real estate prices in the Canberra district. The selected metric for this project is MAE (Mean Absolute Error) due to the presence of a highly skewed distribution of monetary values, including numerous outliers. MAE is a robust metric when dealing with such outliers.
 
 
 
-> #### Background Stories
+> #### The scope of the research problem includes:
 
-The world was experiencing a global financial crisis around 2007 to 2008 due to excessive risk-taking by banks combined with the bursting of the United States housing bubble caused the values of securities tied to U.S. real estate to plummet, damaging financial institutions globally and culminating an international banking crisis. The crisis sparked the Great Recession, which at the time was the most severe global recession since the "Great Depression". Canberra as the capital city of Australia was no exception to this crisis.
-
-Through this project, we hope to understand how the real estate market in Canberra responded to the global financial crisis and what is the aftermath pricing trend. We are also hoping to gain any valuable insight into the Canberra real estate market.
-
-
-
-> #### Questions
-
-- What features affect the real estate prices in Canberra?
-- What is the real estate price in Canberra going to be like in the near future according to the given datasets?
+- Historical data spanning from 2007 to 2019.
+- A maximum limit set at 5 million for real estate prices (for analysis and visualization purposes).
 
 
 
-> #### The Scope of the Research Problem
-
-- Historical data from 2007 - 2019
-- Maximum real estate price capped at 5M (for analysis and visualization)
-
-
-
-> #### Users
-
-- Users & renters
+> #### This project caters to the following user groups:
+- Prospective buyers and renters
 - Property investors
-- Renovators
+- Individuals interested in renovation opportunities
 
-<hr/>
+
+
+#### Dataset:
+Data were obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
+
+Column Descriptions
+- datesold = date when the property was sold
+- price = price of the property when it was sold
+- suburb = suburbs in Canberra, Australia
+- postcode = postal code of a place
+- lat = latitude of the location
+- lon = longitude of the location
+- parking = number of parking lots
+- bathrooms = number of bathrooms
+- bedrooms = number of bedrooms
+- propertyType = type of the property
+- suburbid = the id of the suburbs
+
+## Some Findings:
+
+- The most effective algorithm employed is the Gradient Boost Regressor Tuned, optimized through hyperparameter tuning (including max_depth, n_estimators, and loss function) and the removal of outliers. It achieved a mean neg_mean_absolute_error of -107,049.269 during several cross-validation runs.
+
+- Over the period from 2007 to 2019, house prices in Canberra consistently demonstrated an upward trend, steadily increasing throughout this duration. Conversely, unit prices exhibited fluctuations and remained relatively stable compared to their initial values.
+
+- Analysis of sales across quarters (q1, q2, q3, q4) throughout the observed period revealed consistent patterns, with no significant differences (as confirmed by the Kruskal-Wallis Test). However, when considering seasons, it becomes apparent that real estate sales during the winter season tended to be lower compared to other seasons.
+- etc (Please check out the "data_clean_viz_benedictlaiman.ipynb" file :D )
+
+## Dashboard
+
+Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin-2), modified by [Benedict Laiman](https://www.linkedin.com/in/benedict-laiman-60401319a/)
+
+* This dashboard can only be open locally through localhost, it is created with *Flask*, *SQLAlchemy*, and *MySQL*
+
+* Deployed version of this <a href="https://canberra.herokuapp.com/"><img src="https://img.shields.io/badge/Canberra%20Dashboard-Live-brightgreen&?style=flat-square&logo=heroku" /></a> can be found <a href="https://canberra.herokuapp.com/">***here***</a>, it is created with *Flask*, *SQLAlchemy*, *PostgreSQL*, and *Heroku*
+
+<br>
+
+> #### Home Page
+
+![image-20210306082903178](README_BENEDICTLAIMAN.assets/image-20210306082903178.png)
+
+<br>
+
+> #### About Page
+
+![image-20210306083034787](README_BENEDICTLAIMAN.assets/image-20210306083034787.png)
+
+<br>
+
+> #### Conclusion Page
+
+![image-20210306083104005](README_BENEDICTLAIMAN.assets/image-20210306083104005.png)
+
+<br>
+
+> #### Table & Data Inputter Page
+
+![image-20210406201559256](README_BENEDICTLAIMAN.assets/image-20210406201559256.png)
+
+<br>
+
+> #### Scatter Plot Page
+
+![image-20210306083212695](README_BENEDICTLAIMAN.assets/image-20210306083212695.png)
+
+<br>
+
+> #### Histogram Page
+
+![image-20210306083241700](README_BENEDICTLAIMAN.assets/image-20210306083241700.png)
+
+<br>
+
+> #### Real Estate Price Predictor Page
+
+![image-20210306083307699](README_BENEDICTLAIMAN.assets/image-20210306083307699.png)
+
+*This dashboard is a fully responsive website.
+
+
 
 ## Github File Descriptions
 
@@ -99,8 +162,6 @@ Through this project, we hope to understand how the real estate market in Canber
 
     
 
-<hr/>
-
 ## Notes
 
 - **property_sales_canberra_preprocessed vs property_sales_canberra_preprocessed100** --> both of these files are data that have been preprocessed, however, *"property_sales_canberra_preprocessed100"* takes 100 samples from *"property_sales_canberra_preprocessed"*, or in other word, it is a minified version of *"property_sales_canberra_preprocessed"*.
@@ -119,59 +180,7 @@ Through this project, we hope to understand how the real estate market in Canber
 
 <hr/>
 
-## Dashboard
 
-Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin-2), modified by [Benedict Laiman](https://www.linkedin.com/in/benedict-laiman-60401319a/)
-
-* This dashboard can only be open locally through localhost, it is created with *Flask*, *SQLAlchemy*, and *MySQL*
-
-* Deployed version of this <a href="https://canberra.herokuapp.com/"><img src="https://img.shields.io/badge/Canberra%20Dashboard-Live-brightgreen&?style=flat-square&logo=heroku" /></a> can be found <a href="https://canberra.herokuapp.com/">***here***</a>, it is created with *Flask*, *SQLAlchemy*, *PostgreSQL*, and *Heroku*
-
-<br>
-
-> #### Home Page
-
-![image-20210306082903178](README_BENEDICTLAIMAN.assets/image-20210306082903178.png)
-
-<br>
-
-> #### About Page
-
-![image-20210306083034787](README_BENEDICTLAIMAN.assets/image-20210306083034787.png)
-
-<br>
-
-> #### Conclusion Page
-
-![image-20210306083104005](README_BENEDICTLAIMAN.assets/image-20210306083104005.png)
-
-<br>
-
-> #### Table & Data Inputter Page
-
-![image-20210406201559256](README_BENEDICTLAIMAN.assets/image-20210406201559256.png)
-
-<br>
-
-> #### Scatter Plot Page
-
-![image-20210306083212695](README_BENEDICTLAIMAN.assets/image-20210306083212695.png)
-
-<br>
-
-> #### Histogram Page
-
-![image-20210306083241700](README_BENEDICTLAIMAN.assets/image-20210306083241700.png)
-
-<br>
-
-> #### Real Estate Price Predictor Page
-
-![image-20210306083307699](README_BENEDICTLAIMAN.assets/image-20210306083307699.png)
-
-*This dashboard is a fully responsive website.
-
-<hr/>
 
 ## Profile
 
