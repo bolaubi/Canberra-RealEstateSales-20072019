@@ -6,6 +6,79 @@
 
 Photo by [Daniel Morton](https://unsplash.com/@themortz) on [Unsplash](https://unsplash.com/photos/V_pvQ96focY)
 
+## Github File Descriptions
+
+![image-20210223154120999](README_BENEDICTLAIMAN.assets/image-20210223154120999.png)
+
+1. __property_sales_canberra.csv__ --> csv file containing the original data from HtAG
+
+2. **property_sales_canberra_preprocessed.csv** --> csv file that contains all data from "property_sales_canberra.csv" that have been preprocessed. 
+
+3. **property_sales_canberra_preprocessed.sql**  --> sql file that contains all data from "property_sales_canberra.csv" that have been preprocessed. 
+
+4. **property_sales_canberra_preprocessed100.csv**  --> csv file that contains only 100 data from "property_sales_canberra.csv" that have been preprocessed. 
+
+5. **property_sales_canberra_preprocessed100.sql** --> sql file that contains only 100 data from "property_sales_canberra.csv" that have been preprocessed. 
+
+6. **query_CreateDB_BenedictLaiman.sql** --> sql queries to create database for "app.py"
+
+7. **data_clean_viz_benedictlaiman.ipynb** --> ipynb file containing data that have been cleaned, preprocessed, analized, and visualized
+
+8. **data_model_benedictlaiman.ipynb** --> ipynb file containing data modelling process
+
+9. **gbr_twlo_final** --> final machine learning model
+
+10. **checking_model.ipynb** --> ipynb file to check saved machine learning model
+
+11. **app.py** --> python file for dashboard
+
+12. **static** --> folder containing all the dependencies for dashboard
+
+    - **css** --> folder containing css files
+    - **img** --> folder containing images/ vector images
+    - **js** --> folder containing javascript files
+    - **scss**  --> folder containing scss files
+    - **vendor** --> folder containing the other dependencies
+
+13. **templates** --> html files for dashboard
+
+    - layout.html
+    - login.html
+    - home.html
+    - about.html
+    - conclusion.html
+    - data.html
+    - table_updated.html
+    - histogram.html
+    - histogram_result.html
+    - predict.html
+    - result.html
+    - scatter.html
+    - scatter_result.html
+
+
+14. **CanberraRealEstateSales20072019_BenedictLaiman.pptx** --> Presentation file
+
+15. **README_BENEDICTLAIMAN.assets** --> folder containing assets for markdown file
+
+    
+
+## Notes
+
+- **property_sales_canberra_preprocessed vs property_sales_canberra_preprocessed100** --> both of these files are data that have been preprocessed, however, *"property_sales_canberra_preprocessed100"* takes 100 samples from *"property_sales_canberra_preprocessed"*, or in other word, it is a minified version of *"property_sales_canberra_preprocessed"*.
+
+- *Histogram* and *scatter plot diagram* that are shown in the dashboard ("Canberra Price Prediction") use **property_sales_canberra_preprocessed.csv** to speed up the loading process.
+
+- *Table* and *data inputter* in the dashboard use a database from **property_sales_canberra_preprocessed100.sql**.
+
+- *To sync the data* of histogram, scatter plot diagram, table, and data inputter of the dashboard, please activate this syntax (*line 25*) that is located in **"app.py"** file:
+
+  ```python
+  df_preprocessed = pd.read_sql("SELECT * FROM property_sales_canberra_preprocessed100.mytable", dbConnection)
+  ```
+
+- Use **property_sales_canberra_preprocessed.sql** as the database for the dashboard instead of **property_sales_canberra_preprocessed100.sql** to gain a complete preprocessed dataset.
+
 ## Introduction
 
 The aim of this project is to conduct exploratory data analysis and construct a regression-based machine learning model for predicting real estate prices in the Canberra district. The selected metric for this project is MAE (Mean Absolute Error) due to the presence of a highly skewed distribution of monetary values, including numerous outliers. MAE is a robust metric when dealing with such outliers.
@@ -112,79 +185,6 @@ Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin
 *This dashboard is a fully responsive website.
 
 
-
-## Github File Descriptions
-
-![image-20210223154120999](README_BENEDICTLAIMAN.assets/image-20210223154120999.png)
-
-1. __property_sales_canberra.csv__ --> csv file containing the original data from HtAG
-
-2. **property_sales_canberra_preprocessed.csv** --> csv file that contains all data from "property_sales_canberra.csv" that have been preprocessed. 
-
-3. **property_sales_canberra_preprocessed.sql**  --> sql file that contains all data from "property_sales_canberra.csv" that have been preprocessed. 
-
-4. **property_sales_canberra_preprocessed100.csv**  --> csv file that contains only 100 data from "property_sales_canberra.csv" that have been preprocessed. 
-
-5. **property_sales_canberra_preprocessed100.sql** --> sql file that contains only 100 data from "property_sales_canberra.csv" that have been preprocessed. 
-
-6. **query_CreateDB_BenedictLaiman.sql** --> sql queries to create database for "app.py"
-
-7. **data_clean_viz_benedictlaiman.ipynb** --> ipynb file containing data that have been cleaned, preprocessed, analized, and visualized
-
-8. **data_model_benedictlaiman.ipynb** --> ipynb file containing data modelling process
-
-9. **gbr_twlo_final** --> final machine learning model
-
-10. **checking_model.ipynb** --> ipynb file to check saved machine learning model
-
-11. **app.py** --> python file for dashboard
-
-12. **static** --> folder containing all the dependencies for dashboard
-
-    - **css** --> folder containing css files
-    - **img** --> folder containing images/ vector images
-    - **js** --> folder containing javascript files
-    - **scss**  --> folder containing scss files
-    - **vendor** --> folder containing the other dependencies
-
-13. **templates** --> html files for dashboard
-
-    - layout.html
-    - login.html
-    - home.html
-    - about.html
-    - conclusion.html
-    - data.html
-    - table_updated.html
-    - histogram.html
-    - histogram_result.html
-    - predict.html
-    - result.html
-    - scatter.html
-    - scatter_result.html
-
-
-14. **CanberraRealEstateSales20072019_BenedictLaiman.pptx** --> Presentation file
-
-15. **README_BENEDICTLAIMAN.assets** --> folder containing assets for markdown file
-
-    
-
-## Notes
-
-- **property_sales_canberra_preprocessed vs property_sales_canberra_preprocessed100** --> both of these files are data that have been preprocessed, however, *"property_sales_canberra_preprocessed100"* takes 100 samples from *"property_sales_canberra_preprocessed"*, or in other word, it is a minified version of *"property_sales_canberra_preprocessed"*.
-
-- *Histogram* and *scatter plot diagram* that are shown in the dashboard ("Canberra Price Prediction") use **property_sales_canberra_preprocessed.csv** to speed up the loading process.
-
-- *Table* and *data inputter* in the dashboard use a database from **property_sales_canberra_preprocessed100.sql**.
-
-- *To sync the data* of histogram, scatter plot diagram, table, and data inputter of the dashboard, please activate this syntax (*line 25*) that is located in **"app.py"** file:
-
-  ```python
-  df_preprocessed = pd.read_sql("SELECT * FROM property_sales_canberra_preprocessed100.mytable", dbConnection)
-  ```
-
-- Use **property_sales_canberra_preprocessed.sql** as the database for the dashboard instead of **property_sales_canberra_preprocessed100.sql** to gain a complete preprocessed dataset.
 
 <hr/>
 
