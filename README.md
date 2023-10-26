@@ -79,6 +79,24 @@ Photo by [Daniel Morton](https://unsplash.com/@themortz) on [Unsplash](https://u
 
 - Use **property_sales_canberra_preprocessed.sql** as the database for the dashboard instead of **property_sales_canberra_preprocessed100.sql** to gain a complete preprocessed dataset.
 
+## Dataset:
+
+Data were obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
+
+Column Descriptions
+
+- datesold = date when the property was sold
+- price = price of the property when it was sold
+- suburb = suburbs in Canberra, Australia
+- postcode = postal code of a place
+- lat = latitude of the location
+- lon = longitude of the location
+- parking = number of parking lots
+- bathrooms = number of bathrooms
+- bedrooms = number of bedrooms
+- propertyType = type of the property
+- suburbid = the id of the suburbs
+
 ## Introduction
 
 The aim of this project is to conduct exploratory data analysis and construct a regression-based machine learning model for predicting real estate prices in the Canberra district. The selected metric for this project is MAE (Mean Absolute Error) due to the presence of a highly skewed distribution of monetary values, including numerous outliers. MAE is a robust metric when dealing with such outliers.
@@ -99,7 +117,6 @@ The aim of this project is to conduct exploratory data analysis and construct a 
 
 - Individuals interested in renovation opportunities
 
-  
 
 ## Some Findings:
 
@@ -110,26 +127,6 @@ The aim of this project is to conduct exploratory data analysis and construct a 
 - Analysis of **sales across quarters** (q1, q2, q3, q4) throughout the observed period revealed consistent patterns, with no significant differences (as confirmed by the Kruskal-Wallis Test). However, when **considering seasons**, it becomes apparent that real estate sales during the winter season tended to be lower compared to other seasons.
 
 - etc (Please check out the "data_clean_viz_benedictlaiman.ipynb" file :D )
-
-  
-
-## Dataset:
-
-Data were obtained from HtAG®. HtAG® or Higher than Average Growth is an analytics portal that assists real estate professionals, investors and home buyers in making property-related decisions with the help of timely and actionable real estate market data. HtAG® leverages the benefits of machine learning to rank the growth potential of over 420 Local Government Areas and 6,200 suburbs, Australia wide.
-
-Column Descriptions
-- datesold = date when the property was sold
-- price = price of the property when it was sold
-- suburb = suburbs in Canberra, Australia
-- postcode = postal code of a place
-- lat = latitude of the location
-- lon = longitude of the location
-- parking = number of parking lots
-- bathrooms = number of bathrooms
-- bedrooms = number of bedrooms
-- propertyType = type of the property
-- suburbid = the id of the suburbs
-
 
 
 ## Dashboard
@@ -184,11 +181,7 @@ Dashboard template by [Start Boostrap](https://startbootstrap.com/theme/sb-admin
 
 *This dashboard is a fully responsive website.
 
-
-
 <hr/>
-
-
 
 ## Profile
 
