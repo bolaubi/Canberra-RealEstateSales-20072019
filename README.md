@@ -99,7 +99,9 @@ Column Descriptions
 
 ## Introduction
 
-The aim of this project is to conduct exploratory data analysis and construct a regression-based machine learning model for predicting real estate prices in the Canberra district. The selected metric for this project is MAE (Mean Absolute Error) due to the presence of a highly skewed distribution of monetary values, including numerous outliers. MAE is a robust metric when dealing with such outliers.
+The aim of this project is to conduct exploratory data analysis and reduce overpricing and underpricing by creating a regression-based machine learning model that predicts real estate prices in the Canberra district.
+
+The selected metric for this project is MAE (Mean Absolute Error) due to the presence of a highly skewed distribution of monetary values, including numerous outliers. MAE is a robust metric when dealing with such outliers.
 
 
 
